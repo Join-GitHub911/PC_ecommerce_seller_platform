@@ -1,5 +1,5 @@
 # PC_ecommerce_seller_platform
-毕设：该电商平台采用前后端分离架构，主要分为： 前端：React + TypeScript + Ant Design + React Router + Axios 后端：NestJS/Gin + TypeORM/Gorm + PostgreSQL/MySQL + Redis + JWT 系统模块包括：用户管理、商品管理、购物车、订单管理、支付系统和后台管理。 主要功能：商品浏览、搜索与分类；购物车管理；订单创建与支付；物流跟踪；用户认证；个人中心；商品评价系统。 系统特点：采用RESTful API设计；统一的响应格式；完善的权限控制（RBAC）；支持微信支付与余额支付；商品多规格SKU管理；地址管理等。 整体系统架构清晰，功能完善，满足现代电商平台的基本需求。但网站不为完全完善。
+这是一个基于现代技术栈开发的电商平台，采用前后端分离架构。前端使用 React + TypeScript + Vite 构建，实现了响应式设计，支持商品展示、购物车管理、订单处理等核心功能。后端采用 Node.js + Express + TypeScript + Prisma 技术栈，提供 RESTful API 接口，实现了用户认证、商品管理、订单处理等功能。 项目特点： - 前后端完全分离，便于独立开发和部署 - 使用 TypeScript 确保代码类型安全 - 采用 Prisma 作为 ORM，简化数据库操作 - 支持响应式设计，适配多种设备。网站还有待优化空间，并非完善。
 # E-commerce Platform
 
 一个现代化的电商平台，采用前后端分离架构，提供完整的在线购物解决方案。
