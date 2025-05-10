@@ -1,0 +1,164 @@
+/* 售后页面容器 */
+.aftersale-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 售后卡片样式 */
+.aftersale-card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* 售后状态卡片 */
+.refund-status-card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+
+/* 表单分段样式 */
+.form-section {
+  margin-bottom: 20px;
+}
+
+/* 表单操作按钮 */
+.form-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* 售后申请状态操作按钮 */
+.refund-status-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+/* 售后详情内容样式 */
+.refund-detail-content {
+  padding: 0 10px;
+}
+
+/* 售后申请商品列表 */
+.refund-items-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+
+/* 售后申请商品项 */
+.refund-item {
+  display: flex;
+  padding: 12px;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.refund-item-image {
+  width: 80px;
+  height: 80px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.refund-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.refund-item-info {
+  flex: 1;
+}
+
+.refund-item-name {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.refund-item-meta {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  font-size: 14px;
+}
+
+/* 凭证图片样式 */
+.refund-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.refund-image-item {
+  width: 100px;
+  height: 100px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #f0f0f0;
+}
+
+.refund-image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 时间线样式 */
+.timeline-item {
+  padding: 8px 0;
+}
+
+.timeline-time {
+  color: #888;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.timeline-content {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.timeline-operator {
+  color: #888;
+  font-size: 13px;
+}
+
+/* 加载容器 */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+/* 媒体查询 - 移动设备适配 */
+@media (max-width: 768px) {
+  .aftersale-container {
+    padding: 10px;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .form-actions button {
+    margin-bottom: 10px;
+  }
+  
+  .refund-status-actions {
+    flex-direction: column;
+  }
+  
+  .refund-status-actions button {
+    margin-bottom: 8px;
+  }
+} 

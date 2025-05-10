@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@/*": ["src/*"],
+      "@e-commerce-platform/*": ["e-commerce-platform/src/*"],
+      "@/entities/*": ["e-commerce-platform/src/entities/*"],
+      "@/types/*": ["e-commerce-platform/src/types/*"],
+      "@/utils/*": ["e-commerce-platform/src/utils/*"],
+      "@/exceptions/*": ["e-commerce-platform/src/exceptions/*"],
+      "@/shared/*": ["e-commerce-platform/src/shared/*"]
+    }
+  }
+} 

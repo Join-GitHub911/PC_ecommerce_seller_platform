@@ -1,0 +1,184 @@
+.logistics-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.logistics-header {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logistics-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.logistics-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.tracking-card, 
+.delivery-info, 
+.tracking-query, 
+.faq-card {
+  margin-bottom: 16px;
+}
+
+.tracking-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 32px;
+}
+
+.tracking-summary {
+  margin-bottom: 24px;
+}
+
+.tracking-progress {
+  margin-bottom: 24px;
+}
+
+.tracking-timeline {
+  margin-top: 16px;
+  padding: 0 16px;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.address-info p {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.query-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.query-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+.option-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.option-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .logistics-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .logistics-actions {
+    margin-top: 16px;
+    width: 100%;
+  }
+  
+  .logistics-actions button {
+    flex: 1;
+  }
+}
+
+/* 样式扩展 - 预计送达时间 */
+.estimated-delivery {
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+/* 快递员信息样式 */
+.courier-info {
+  margin: 16px 0;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+/* 物流地址信息 */
+.delivery-address {
+  margin-top: 16px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+/* 物流查询错误提示 */
+.tracking-error {
+  margin: 20px 0;
+}
+
+/* 时间线项目高亮 */
+.latest-track {
+  font-weight: bold;
+  color: #1890ff;
+}
+
+/* 物流查询外部链接 */
+.query-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+/* 媒体查询优化移动设备显示 */
+@media (max-width: 576px) {
+  .logistics-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .logistics-actions button {
+    margin-bottom: 8px;
+  }
+  
+  .estimated-delivery {
+    margin-top: 12px;
+  }
+} 

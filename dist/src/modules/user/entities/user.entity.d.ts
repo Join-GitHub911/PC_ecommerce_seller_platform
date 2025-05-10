@@ -1,0 +1,31 @@
+import { Address } from "@/entities/address.entity";
+import { Order } from "@/entities/order.entity";
+import { Cart } from "@/entities/cart.entity";
+export declare class User {
+    id: string;
+    username: string;
+    email: string;
+    password: string;
+    phone: string;
+    nickname: string;
+    avatar: string;
+    status: string;
+    isAdmin: boolean;
+    isActive: boolean;
+    wechatOpenId?: string;
+    isVerified: boolean;
+    realName?: string;
+    idCard?: string;
+    isBlacklisted: boolean;
+    tags?: string;
+    profile?: Record<string, any>;
+    metadata?: Record<string, any>;
+    roles: string[];
+    permissions: string[];
+    addresses: Address[];
+    orders: Order[];
+    carts: Cart[];
+    createdAt: Date;
+    updatedAt: Date;
+    initializeDefaultValues(): void;
+}

@@ -1,0 +1,32 @@
+import { OrderItem } from './OrderItem';
+import { User } from './User';
+import { Address } from './Address';
+import { OrderStatus } from '@/types/order';
+export declare class Order {
+    id: string;
+    userId: string;
+    user: User;
+    addressId: string;
+    address: Address;
+    items: OrderItem[];
+    totalAmount: number;
+    deliveryFee: number;
+    discount: number;
+    finalAmount: number;
+    status: OrderStatus;
+    paymentId: string;
+    paymentTime: Date;
+    trackingNumber: string;
+    carrier: string;
+    shipmentTime: Date;
+    completionTime: Date;
+    cancelReason: string;
+    cancelledBy: string;
+    cancelledAt: Date;
+    remark: string;
+    createdAt: Date;
+    updatedAt: Date;
+    completedAt: Date;
+    refundReason: string;
+    refundedAt: Date;
+}

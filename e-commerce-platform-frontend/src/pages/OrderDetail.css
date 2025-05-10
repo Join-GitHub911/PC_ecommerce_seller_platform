@@ -1,0 +1,111 @@
+.order-detail-container {
+  padding: 16px;
+  background-color: #f5f5f5;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.not-found {
+  text-align: center;
+  padding: 50px;
+  font-size: 18px;
+  color: #999;
+}
+
+.order-header {
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-progress {
+  margin-bottom: 16px;
+}
+
+.order-steps {
+  padding: 16px 0;
+}
+
+.product-list {
+  margin-bottom: 16px;
+}
+
+.item-price {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.item-subtotal {
+  text-align: right;
+}
+
+.order-total {
+  padding: 8px 0;
+}
+
+.total-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.order-final-total {
+  font-size: 16px;
+}
+
+.delivery-info, .order-info {
+  margin-bottom: 16px;
+}
+
+.address-info p {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.special-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 0;
+  text-align: center;
+}
+
+.cancelled-status, .refunding-status, .refunded-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .order-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .order-status {
+    margin-top: 8px;
+  }
+  
+  .order-steps {
+    padding: 8px 0;
+  }
+  
+  .ant-steps-label-vertical .ant-steps-item-content {
+    width: auto;
+    margin-top: 8px;
+  }
+} 

@@ -1,0 +1,90 @@
+.cart-promotions-card {
+  margin-bottom: 16px;
+}
+
+.cart-promotions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.cart-promotions-title {
+  margin: 0 !important;
+}
+
+.cart-max-discount {
+  font-weight: 500;
+}
+
+.promotion-item {
+  padding: 10px 0;
+  border-bottom: 1px dashed #f0f0f0;
+}
+
+.promotion-item:last-child {
+  border-bottom: none;
+}
+
+.promotion-item.unavailable {
+  opacity: 0.8;
+}
+
+.promotion-item-header {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 6px;
+}
+
+.promotion-tag {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 8px;
+  white-space: nowrap;
+}
+
+.promotion-tag-text {
+  margin-left: 4px;
+}
+
+.promotion-description {
+  flex: 1;
+  color: #333;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.promotion-progress {
+  margin-top: 4px;
+  font-size: 12px;
+}
+
+.promotion-action {
+  margin-top: 4px;
+  text-align: right;
+}
+
+.promotions-divider {
+  margin: 12px 0;
+  color: #999;
+  font-size: 12px;
+}
+
+.promotions-expand {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.unavailable-promotions {
+  opacity: 0.75;
+}
+
+@media (max-width: 576px) {
+  .promotion-item-header {
+    flex-direction: column;
+  }
+  
+  .promotion-tag {
+    margin-bottom: 6px;
+  }
+} 

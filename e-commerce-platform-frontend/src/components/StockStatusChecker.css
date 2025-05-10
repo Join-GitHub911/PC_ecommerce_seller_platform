@@ -1,0 +1,46 @@
+.stock-status-container {
+  display: inline-block;
+}
+
+.stock-status {
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 2px;
+  font-weight: normal;
+  line-height: 1.2;
+}
+
+.stock-status .anticon {
+  margin-right: 4px;
+  font-size: 11px;
+}
+
+.stock-status-removed {
+  background-color: #fff1f0;
+  border-color: #ffa39e;
+  color: #f5222d;
+}
+
+.stock-status-soldout {
+  background-color: #f5f5f5;
+  border-color: #d9d9d9;
+  color: #8c8c8c;
+}
+
+.stock-status-limited {
+  background-color: #fffbe6;
+  border-color: #ffe58f;
+  color: #faad14;
+}
+
+.stock-status-insufficient {
+  background-color: #fff7e6;
+  border-color: #ffd591;
+  color: #fa8c16;
+}
+
+.stock-status-sufficient {
+  background-color: #f6ffed;
+  border-color: #b7eb8f;
+  color: #52c41a;
+} 

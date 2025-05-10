@@ -1,0 +1,106 @@
+/* 购买信息样式 */
+.purchase-info-section {
+  margin: 15px 0;
+  border-bottom: 1px dashed #e8e8e8;
+  padding-bottom: 15px;
+}
+
+.purchase-info-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.purchase-info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.purchase-info-desc {
+  color: #333;
+  font-size: 13px;
+}
+
+/* 优化商品参数表格样式 */
+.spec-detailed-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+}
+
+.spec-detailed-table tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.spec-detailed-table td {
+  padding: 10px;
+  border: 1px solid #e8e8e8;
+}
+
+.spec-label {
+  width: 120px;
+  color: #666;
+  font-weight: 500;
+}
+
+.spec-value {
+  color: #333;
+}
+
+/* 图片展示优化 */
+.product-images-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.product-images-gallery img {
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.product-images-gallery img:hover {
+  transform: scale(1.02);
+}
+
+/* 适用场景和注意事项样式 */
+.product-detail-content h3 {
+  margin-top: 25px;
+  margin-bottom: 12px;
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+  position: relative;
+  padding-left: 12px;
+}
+
+.product-detail-content h3::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 16px;
+  background-color: #ff6700;
+  border-radius: 2px;
+}
+
+.product-detail-content p, 
+.product-detail-content ul {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.product-detail-content ul {
+  padding-left: 20px;
+}
+
+.product-detail-content ul li {
+  margin-bottom: 8px;
+} 

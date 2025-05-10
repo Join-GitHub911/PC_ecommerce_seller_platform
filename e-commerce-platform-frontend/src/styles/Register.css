@@ -1,0 +1,250 @@
+.register-container {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e8edf5 100%);
+}
+
+.register-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../assets/register-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.register-left::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 80, 0, 0.1);
+  z-index: 1;
+}
+
+.register-benefits {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  max-width: 80%;
+}
+
+.register-benefits h2 {
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-size: 28px;
+}
+
+.register-benefits ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.register-benefits li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.register-benefits li .anticon {
+  color: #ff5000;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.register-right {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-logo .logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.login-logo .you-text {
+  color: #ff5000;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.login-logo .hong-text {
+  color: #666;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.login-title {
+  color: #333;
+  margin-bottom: 0.5rem !important;
+}
+
+.login-subtitle {
+  color: #888;
+}
+
+.register-form {
+  width: 100%;
+  max-width: 420px;
+}
+
+.register-form .ant-form-item {
+  margin-bottom: 1.5rem;
+}
+
+.register-form .ant-input,
+.register-form .ant-input-affix-wrapper {
+  height: 44px;
+  border-radius: 6px;
+}
+
+.register-form .ant-input:focus,
+.register-form .ant-input-affix-wrapper:focus,
+.register-form .ant-input:hover,
+.register-form .ant-input-affix-wrapper:hover {
+  border-color: #ff5000;
+  box-shadow: 0 0 0 2px rgba(255, 80, 0, 0.1);
+}
+
+.register-form .ant-form-item-control-input-content {
+  display: flex;
+}
+
+.register-form .verification-code-button {
+  margin-left: 10px;
+  height: 44px;
+  background-color: #ff5000;
+  border-color: #ff5000;
+  border-radius: 6px;
+  width: 130px;
+  transition: all 0.3s;
+}
+
+.register-form .verification-code-button:hover {
+  background-color: #ff6a00;
+  border-color: #ff6a00;
+}
+
+.register-form .ant-btn-primary {
+  height: 44px;
+  font-size: 16px;
+  width: 100%;
+  background-color: #ff5000;
+  border-color: #ff5000;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.register-form .ant-btn-primary:hover {
+  background-color: #ff6a00;
+  border-color: #ff6a00;
+}
+
+.register-form-option {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.register-form-option a {
+  color: #ff5000;
+}
+
+.register-form-option a:hover {
+  color: #ff6a00;
+}
+
+.register-divider {
+  color: #888;
+  margin: 1.5rem 0;
+}
+
+.third-party-login {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.third-party-login-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.third-party-login-item .icon-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s;
+}
+
+.third-party-login-item:hover .icon-wrapper {
+  transform: translateY(-3px);
+}
+
+.third-party-login-item .wechat {
+  background-color: #07c160;
+  color: #fff;
+}
+
+.third-party-login-item .alipay {
+  background-color: #1677ff;
+  color: #fff;
+}
+
+.third-party-login-item .weibo {
+  background-color: #e6162d;
+  color: #fff;
+}
+
+.third-party-login-item span {
+  font-size: 12px;
+  color: #888;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .register-container {
+    flex-direction: column;
+  }
+  
+  .register-left {
+    display: none;
+  }
+  
+  .register-right {
+    padding: 1.5rem;
+  }
+  
+  .register-form {
+    max-width: 100%;
+  }
+} 

@@ -1,0 +1,428 @@
+.product-special-offers {
+  margin-bottom: 24px;
+  font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+.offers-card {
+  border-radius: 12px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f0f0f0;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.offers-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.offers-card .ant-card-head {
+  background-color: #fafafa;
+  padding: 0 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.offers-card .ant-card-head-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.offers-card .ant-card-body {
+  padding: 12px 16px;
+}
+
+.offers-section {
+  padding: 4px 0;
+}
+
+.redpacket-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.offer-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px dashed #f0f0f0;
+}
+
+.offer-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.offer-label {
+  width: 70px;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  flex-shrink: 0;
+  line-height: 32px;
+}
+
+.offer-content {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* 标签通用样式 */
+.offer-tag {
+  border-radius: 6px;
+  padding: 6px 12px;
+  margin-right: 0;
+  transition: all 0.3s;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.offer-tag:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+/* 新用户标签 */
+.new-user-tag {
+  background: linear-gradient(135deg, #fff0f0 0%, #ffffff 100%) !important;
+  color: #ff4d4f !important;
+  border-left: 3px solid #ff4d4f !important;
+}
+
+.new-user-icon {
+  color: #ff4d4f;
+  font-size: 18px;
+  margin-right: 6px;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+}
+
+.new-user-text {
+  font-weight: 600;
+}
+
+/* 优惠券标签 */
+.coupon-tag {
+  background: linear-gradient(135deg, #fff7e6 0%, #ffffff 100%) !important;
+  color: #ff7a45 !important;
+  border-left: 3px solid #ff7a45 !important;
+}
+
+.coupon-icon {
+  color: #ff7a45;
+  font-size: 18px;
+  margin-right: 6px;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.coupon-text {
+  font-weight: 600;
+}
+
+/* 赠品标签 */
+.gift-tag {
+  background: linear-gradient(135deg, #f6ffed 0%, #ffffff 100%) !important;
+  color: #52c41a !important;
+  border-left: 3px solid #52c41a !important;
+}
+
+.gift-icon {
+  color: #52c41a;
+  font-size: 18px;
+  margin-right: 6px;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.gift-text {
+  font-weight: 600;
+}
+
+/* 配送标签 */
+.shipping-tag {
+  background: linear-gradient(135deg, #e6f7ff 0%, #ffffff 100%) !important;
+  color: #1890ff !important;
+  border-left: 3px solid #1890ff !important;
+  padding: 6px 12px;
+}
+
+/* 支付标签 */
+.payment-tag {
+  background: linear-gradient(135deg, #f9f0ff 0%, #ffffff 100%) !important;
+  color: #722ed1 !important;
+  border-left: 3px solid #722ed1 !important;
+  padding: 6px 12px;
+}
+
+/* 店铺标签 */
+.store-tag {
+  background: linear-gradient(135deg, #fffbe6 0%, #ffffff 100%) !important;
+  color: #faad14 !important;
+  border-left: 3px solid #faad14 !important;
+  padding: 6px 12px;
+}
+
+/* 修复Badge样式 */
+.ant-badge-count {
+  box-shadow: none !important;
+  padding: 0 !important;
+  height: auto !important;
+  min-width: auto !important;
+  line-height: 1 !important;
+}
+
+.ant-badge .ant-badge-count {
+  transform: translate(-50%, -50%) !important;
+}
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+  .offer-item {
+    flex-direction: column;
+  }
+  
+  .offer-label {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  
+  .offer-content {
+    width: 100%;
+  }
+}
+
+/* 添加微动画 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.offer-item {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* 红包样式 */
+.redpacket-item {
+  display: flex;
+  align-items: center;
+}
+
+.redpacket-icon {
+  color: #D9001B;
+  font-size: 16px;
+  margin-right: 4px;
+}
+
+.redpacket-text {
+  color: #D9001B;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* 淘金币样式 */
+.goldcoin-item {
+  display: flex;
+  align-items: center;
+}
+
+.goldcoin-icon {
+  color: #FF9A00;
+  font-size: 16px;
+  margin-right: 4px;
+}
+
+.goldcoin-text {
+  color: #FF9A00;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* 普通优惠券样式 */
+.coupon-item {
+  display: flex;
+  align-items: center;
+  height: 24px;
+}
+
+.offers-divider {
+  margin: 10px 0;
+}
+
+/* 折叠面板样式 */
+.offers-collapse {
+  margin-top: 4px;
+}
+
+.offers-collapse .ant-collapse-header {
+  padding: 8px 0 !important;
+  color: #333 !important;
+  font-size: 13px;
+}
+
+.offers-collapse .ant-collapse-content-box {
+  padding: 0 0 0 24px !important;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  color: #666;
+  font-size: 13px;
+}
+
+.panel-icon {
+  margin-right: 8px;
+  font-size: 14px;
+  color: #999;
+}
+
+.detail-item {
+  margin-left: 8px;
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: #666;
+}
+
+.special-offers-container {
+  background-color: #fff8f5;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 80, 0, 0.15);
+  box-shadow: 0 3px 8px rgba(255, 80, 0, 0.08);
+}
+
+.special-offers-row {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.special-offers-row:last-child {
+  margin-bottom: 0;
+}
+
+.offers-label {
+  color: #666;
+  width: 70px;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.offers-content {
+  flex: 1;
+}
+
+.coupons-container,
+.activities-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.coupon-tag,
+.activity-tag {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+  margin-bottom: 8px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.coupon-tag:hover,
+.activity-tag:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.red-envelope {
+  color: #ff5000;
+  background-color: #fff5f0;
+  border: 1px solid #ffdecf;
+}
+
+.gold-coins {
+  color: #ff8c00;
+  background-color: #fff8f0;
+  border: 1px solid #ffe0b2;
+}
+
+.threshold-discount {
+  color: #52c41a;
+  background-color: #f4fff4;
+  border: 1px solid #d6f0d6;
+}
+
+.new-user {
+  color: #1890ff;
+  background-color: #e6f7ff;
+  border: 1px solid #91d5ff;
+}
+
+.tag-icon {
+  margin-right: 4px;
+  font-size: 14px;
+}
+
+.coupon-value {
+  margin-left: 6px;
+  font-weight: 600;
+}
+
+.coupons-action,
+.activities-action {
+  padding: 0;
+  height: auto;
+  color: #ff5000;
+  font-size: 13px;
+  transition: color 0.2s;
+}
+
+.coupons-action:hover,
+.activities-action:hover {
+  color: #ff7a45;
+}
+
+@media (max-width: 576px) {
+  .special-offers-row {
+    flex-direction: column;
+  }
+  
+  .offers-label {
+    margin-bottom: 8px;
+  }
+} 

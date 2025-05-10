@@ -1,0 +1,66 @@
+/* Header 样式 */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  padding: 0;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* 桌面端导航 */
+.desktop-nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* 移动端菜单按钮 */
+.mobile-menu-button {
+  display: block;
+}
+
+/* 移动端导航菜单 */
+.mobile-nav {
+  position: absolute;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 购物车徽章样式 */
+.cart-badge {
+  color: #fff;
+  background-color: #f5222d;
+  box-shadow: 0 0 0 1px #fff;
+}
+
+/* 响应式样式 */
+@media screen and (max-width: 768px) {
+  .logo {
+    font-size: 20px;
+  }
+} 

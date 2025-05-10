@@ -1,0 +1,38 @@
+declare enum Environment {
+    Development = "development",
+    Production = "production",
+    Test = "test"
+}
+declare class EnvironmentVariables {
+    NODE_ENV: Environment;
+    DATABASE_PORT: number;
+    DATABASE_HOST: string;
+    DATABASE_USERNAME: string;
+    DATABASE_PASSWORD: string;
+    DATABASE_NAME: string;
+    REDIS_HOST: string;
+    REDIS_PORT: number;
+    REDIS_PASSWORD: string;
+    JWT_SECRET: string;
+    JWT_EXPIRES_IN: string;
+    ALIPAY_APP_ID: string;
+    ALIPAY_PRIVATE_KEY: string;
+    ALIPAY_PUBLIC_KEY: string;
+    ALIPAY_NOTIFY_URL: string;
+    SMS_ACCESS_KEY_ID: string;
+    SMS_ACCESS_KEY_SECRET: string;
+    SMS_SIGN_NAME: string;
+    SMS_TEMPLATE_CODE: string;
+    EMAIL_HOST: string;
+    EMAIL_PORT: number;
+    EMAIL_USER: string;
+    EMAIL_PASSWORD: string;
+    EMAIL_FROM: string;
+    UPLOAD_DIR: string;
+    MAX_FILE_SIZE: number;
+    ALLOWED_FILE_TYPES: string;
+    THROTTLE_TTL: number;
+    THROTTLE_LIMIT: number;
+}
+export declare function validate(config: Record<string, unknown>): EnvironmentVariables;
+export {};

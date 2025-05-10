@@ -1,0 +1,101 @@
+"use strict";
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.AppModule = void 0;
+const common_1 = require("@nestjs/common");
+const config_1 = require("@nestjs/config");
+const typeorm_1 = require("@nestjs/typeorm");
+const nestjs_redis_1 = require("@liaoliaots/nestjs-redis");
+const order_module_1 = require("./modules/order/order.module");
+const user_module_1 = require("./modules/user/user.module");
+const product_module_1 = require("./modules/product/product.module");
+const payment_module_1 = require("./modules/payment/payment.module");
+const core_1 = require("@nestjs/core");
+const order_exception_filter_1 = require("./filters/order-exception.filter");
+const payment_exception_filter_1 = require("./filters/payment-exception.filter");
+const OrderExceptionHandler_1 = require("./services/OrderExceptionHandler");
+const throttler_1 = require("@nestjs/throttler");
+const nestjs_i18n_1 = require("nestjs-i18n");
+const path = require("path");
+const cart_module_1 = require("./modules/cart/cart.module");
+const inventory_module_1 = require("./modules/inventory/inventory.module");
+const coupon_module_1 = require("./modules/coupon/coupon.module");
+const notification_module_1 = require("./modules/notification/notification.module");
+let AppModule = class AppModule {
+};
+exports.AppModule = AppModule;
+exports.AppModule = AppModule = __decorate([
+    (0, common_1.Module)({
+        imports: [
+            config_1.ConfigModule.forRoot({
+                isGlobal: true,
+                envFilePath: `.env.${process.env.NODE_ENV || 'development'}`,
+            }),
+            typeorm_1.TypeOrmModule.forRootAsync({
+                imports: [config_1.ConfigModule],
+                useFactory: (configService) => ({
+                    type: 'mysql',
+                    host: configService.get('DB_HOST'),
+                    port: configService.get('DB_PORT'),
+                    username: configService.get('DB_USERNAME'),
+                    password: configService.get('DB_PASSWORD'),
+                    database: configService.get('DB_DATABASE'),
+                    entities: [__dirname + '/**/*.entity{.ts,.js}'],
+                    synchronize: true,
+                }),
+                inject: [config_1.ConfigService],
+            }),
+            nestjs_redis_1.RedisModule.forRootAsync({
+                imports: [config_1.ConfigModule],
+                useFactory: (configService) => ({
+                    config: {
+                        host: configService.get('REDIS_HOST'),
+                        port: configService.get('REDIS_PORT'),
+                        password: configService.get('REDIS_PASSWORD'),
+                    },
+                }),
+                inject: [config_1.ConfigService],
+            }),
+            throttler_1.ThrottlerModule.forRoot({
+                ttl: 60000,
+                limit: 10,
+            }),
+            nestjs_i18n_1.I18nModule.forRoot({
+                fallbackLanguage: 'zh',
+                loaderOptions: {
+                    path: path.join(__dirname, '/i18n/'),
+                    watch: true,
+                },
+                resolvers: [
+                    { use: nestjs_i18n_1.QueryResolver, options: ['lang'] },
+                    new nestjs_i18n_1.HeaderResolver(['x-lang']),
+                ],
+            }),
+            order_module_1.OrderModule,
+            user_module_1.UserModule,
+            product_module_1.ProductModule,
+            payment_module_1.PaymentModule,
+            cart_module_1.CartModule,
+            inventory_module_1.InventoryModule,
+            coupon_module_1.CouponModule,
+            notification_module_1.NotificationModule,
+        ],
+        providers: [
+            {
+                provide: core_1.APP_FILTER,
+                useClass: order_exception_filter_1.OrderExceptionFilter,
+            },
+            {
+                provide: core_1.APP_FILTER,
+                useClass: payment_exception_filter_1.PaymentExceptionFilter,
+            },
+            OrderExceptionHandler_1.OrderExceptionHandler,
+        ],
+    })
+], AppModule);
+//# sourceMappingURL=app.module.js.map
